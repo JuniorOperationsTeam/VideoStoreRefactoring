@@ -12,7 +12,9 @@ import java.util.Set;
  ***********************************************************/
 public abstract class Main
 {
-
+/*
+teste comment
+ */
 	/***********************************************************
 	 * @param args
 	 * @throws IOException 
