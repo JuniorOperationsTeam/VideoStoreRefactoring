@@ -1,20 +1,24 @@
 package v9;
 
-public class NewReleasePrice extends Price
-{
+public class BestPrice extends Price {
+    public BestPrice()
+    {
+    }
 
-	public NewReleasePrice()
-	{
-	}
+    public BestPrice(boolean blueray)
+    {
+        super(blueray);
+    }
 
-	public double getRentalAmount(int duration)
-	{
-		return duration * 3;
-	}
+    @Override
+    public double getRentalAmount(int duration)
+    {
+        return duration + (is_blueray() ? 1 : 0);
+    }
 
-	public int getFrequentRentalPoints(int duration)
-	{
-		return duration > 1 ? 2 : 1;
-	}
-
+    @Override
+    public int getFrequentRentalPoints(int duration)
+    {
+        return is_blueray() ? 1 : 0;
+    }
 }
